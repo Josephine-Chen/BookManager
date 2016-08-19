@@ -23,9 +23,10 @@
 
   <div class="field">
     <%= f.label :publisher_id %>
-    <%= f.number_field :publisher_id %>
+    <%= f.collection_select :publisher_id, Publisher.alphabetical, :id, :name %>
   </div>
 
+  <%= render partial: 'authors_checkboxes' %>
   <div class="actions">
     <%= f.submit %>
   </div>
